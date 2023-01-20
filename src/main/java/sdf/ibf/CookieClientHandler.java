@@ -44,7 +44,12 @@ public class CookieClientHandler implements Runnable {
           dos.writeUTF(cookieValue);
           dos.flush();
         }
+
       }
+      dos.close();
+      bos.close();
+      dis.close();
+      is.close();
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
