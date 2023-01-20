@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Cookie {
-    String dirPath = "c:/Users/aqifs/ibf/fortune_cookie/src/main/java/sdf/ibf/cookie-folder";
+    String dirPath = "./cookie-folder";
     String fileName = "cookie_file.txt";
     List<String> cookie = null;
 

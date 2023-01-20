@@ -8,13 +8,14 @@ import java.util.concurrent.Executors;
 
 public final class App {
     public static void main(String[] args) throws IOException {
-        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(1);
         ServerSocket server = new ServerSocket(Integer.parseInt(args[0]));
         while (true) {
             Socket socket = server.accept();
-            System.out.printf("Connection received on port %s.", args[0]);
+            System.out.printf("Connection received on port %s.\n", args[0]);
             CookieClientHandler cCH = new CookieClientHandler(socket);
             executorService.submit(cCH);
+
         }
 
     }
